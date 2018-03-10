@@ -1,0 +1,16 @@
+<SymptomManager>
+	<User>
+		<userId></userId>
+		<role></role>
+		<firstName></firstName>
+		<lastName></lastName>
+	</User>
+	<Sumission>
+		<submissionId></submissionId>
+		<date></date>
+	</Sumission>
+	<Symptom>
+		<painLevel></painLevel>
+		<symptomType></symptomType>
+	</Symptom>
+</SymptomManager>
