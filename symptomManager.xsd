@@ -12,7 +12,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Sumission" minOccurs="1">
+        <xs:element name="Submission" minOccurs="1">
           <xs:complexType>
             <xs:sequence>
               <xs:element minOccurs="1" type="xs:int" name="submissionId"/>

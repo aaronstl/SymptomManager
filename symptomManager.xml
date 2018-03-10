@@ -5,10 +5,10 @@
 		<firstName></firstName>
 		<lastName></lastName>
 	</User>
-	<Sumission>
+	<Submission>
 		<submissionId></submissionId>
 		<date></date>
-	</Sumission>
+	</Submission>
 	<Symptom>
 		<painLevel></painLevel>
 		<symptomType></symptomType>
