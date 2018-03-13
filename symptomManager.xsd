@@ -1,4 +1,4 @@
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="com.symptomChecker">
   <xs:element name="SymptomManager">
     <xs:complexType>
       <xs:sequence>
@@ -17,16 +17,19 @@
             <xs:sequence>
               <xs:element minOccurs="1" type="xs:int" name="submissionId"/>
               <xs:element minOccurs="1" type="xs:string" name="date"/>
+              <xs:element minOccurs="1" type="xs:int" name="painLevel"/>
+              <xs:element minOccurs="1" ref="n1:SymptomManager" xmlns:n1="com.symptomChecker"/>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Symptom" minOccurs="1">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element minOccurs="1" type="xs:int" name="painLevel"/>
-              <xs:element minOccurs="1" type="xs:string" name="symptomType"/> <!-- probably ref this to a complex type eventually -->
-            </xs:sequence>
-          </xs:complexType>
+        <xs:element name="SymptomType" minOccurs="1">
+          <xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Tingle"/>
+					<xs:enumeration value="Cold"/>
+					<xs:enumeration value="Hot"/>
+				</xs:restriction>
+		</xs:simpleType>
         </xs:element>
       </xs:sequence>
     </xs:complexType>
